@@ -27,20 +27,20 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
-    new BrowserSyncPlugin(
-      {
-        host: 'localhost',
-        port: 3000,
-        proxy: 'http://localhost:8080/',
-        files: ['src/*'],
-      },
-      {
-        reload: false
-      }
-    )
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8080/',
+      files: ['src/*'],
+    },
+    {
+      reload: false
+    })
   ],
 }
