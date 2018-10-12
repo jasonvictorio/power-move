@@ -1,3 +1,11 @@
+const rem = x => `${x/10}rem`;
+
+const bodyPadding = 16;
+const gridGutter = 16;
+const gridWidth = 96;
+const gridCount = 12;
+const bodyWidth = (gridWidth * gridCount) + (gridGutter * (gridCount - 1)) + (bodyPadding * 2);
+
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -141,6 +149,20 @@ let verticalScale = {
   '7': '6.4rem',
   '8': '9.6rem',
   '9': '12.8rem',
+
+let horizonalScale = {
+  'px': '1px',
+  '0': '0',
+  '25p': '25%',
+  '33p': '33.33%',
+  '50p': '50%',
+  '66p': '66.67%',
+  '75p': '75%',
+  '100p': '100%',
+}
+
+for (let i = 1; i <= gridCount; i++) {
+  horizonalScale[i] = rem((i*gridWidth) + ((i-1)*gridGutter))
 }
 
 module.exports = {
@@ -483,38 +505,9 @@ module.exports = {
   |
   */
 
-  width: {
+  width: Object.assign(horizonalScale, {
     'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    '1/2': '50%',
-    '1/3': '33.33333%',
-    '2/3': '66.66667%',
-    '1/4': '25%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.66667%',
-    '5/6': '83.33333%',
-    'full': '100%',
-    'screen': '100vw',
-  },
-
+  }),
 
   /*
   |-----------------------------------------------------------------------------
@@ -531,26 +524,9 @@ module.exports = {
   |
   */
 
-  height: {
+  height: Object.assign(horizonalScale, {
     'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    'full': '100%',
-    'screen': '100vh'
-  },
+  }),
 
 
   /*
@@ -609,19 +585,10 @@ module.exports = {
   |
   */
 
-  maxWidth: {
-    'xs': '20rem',
-    'sm': '30rem',
-    'md': '40rem',
-    'lg': '50rem',
-    'xl': '60rem',
-    '2xl': '70rem',
-    '3xl': '80rem',
-    '4xl': '90rem',
-    '5xl': '100rem',
-    'full': '100%',
-    'body': '136rem',
-  },
+  maxWidth: Object.assign(horizonalScale, {
+    'auto': 'auto',
+    'body': rem(bodyWidth),
+  }),
 
 
   /*
@@ -661,7 +628,7 @@ module.exports = {
 
   padding: Object.assign(verticalScale, {
     '100p': '100%',
-    'body': '1.6rem',
+    'body': rem(bodyPadding),
   }),
 
 
