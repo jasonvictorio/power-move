@@ -604,7 +604,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
-    'body': '80rem',
+    'body': '135.8rem',
   },
 
 
@@ -660,7 +660,7 @@ module.exports = {
     '24': '6rem',
     '32': '8rem',
     '100p': '100%',
-    'body': '1.25rem',
+    'body': '1.5rem',
   },
 
 
