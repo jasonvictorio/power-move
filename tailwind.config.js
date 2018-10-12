@@ -620,7 +620,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
-    'body': '135.8rem',
+    'body': '136rem',
   },
 
 
