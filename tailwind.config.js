@@ -230,6 +230,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      '"Open Sans"',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -244,6 +245,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      '"Playfair Display"',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -340,10 +342,10 @@ module.exports = {
   */
 
   leading: {
-    'none': 1,
+    'solid': 1,
     'tight': 1.25,
     'normal': 1.5,
-    'loose': 2,
+    'double': 2,
   },
 
 
@@ -432,11 +434,11 @@ module.exports = {
   */
 
   borderWidths: {
-    default: '1px',
+    default: '0.1rem',
     '0': '0',
-    '2': '2px',
-    '4': '4px',
-    '8': '8px',
+    '2': '0.2rem',
+    '4': '0.4rem',
+    '8': '0.8rem',
   },
 
 
