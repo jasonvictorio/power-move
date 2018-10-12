@@ -6,6 +6,7 @@ const gridWidth = 96;
 const gridCount = 12;
 const bodyWidth = (gridWidth * gridCount) + (gridGutter * (gridCount - 1)) + (bodyPadding * 2);
 
+const verticalBase = 8;
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -140,15 +141,13 @@ let colors = {
 let verticalScale = {
   'px': '1px',
   '0': '0',
-  '1': '0.8rem',
-  '2': '1.2rem',
-  '3': '1.6rem',
-  '4': '2.4rem',
-  '5': '3.2rem',
-  '6': '4.8rem',
-  '7': '6.4rem',
-  '8': '9.6rem',
-  '9': '12.8rem',
+  '1': rem(verticalBase),
+}
+
+for (let i = 1; i < 10; i++) {
+  verticalScale[i+1] = rem(i*2 * verticalBase)
+}
+
 
 let horizonalScale = {
   'px': '1px',
