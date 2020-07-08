@@ -8,7 +8,12 @@ module.exports = {
       sm: { max: '480px' },
       xs: { max: '361px' },
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '1x1': '100%',
+        '2x1': '50%',
+      },
+    },
   },
   variants: {},
   plugins: [],
