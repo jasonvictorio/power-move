@@ -1,5 +1,10 @@
 @import 'css/reset.scss';
 
+$hamburger-layer-border-radius: 0;
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+@import 'hamburgers/dist/hamburgers';
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -14,6 +19,6 @@ body {
 
 .container {
   max-width: 1400px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
